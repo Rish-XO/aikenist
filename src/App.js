@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import { useState } from "react";
 import "./App.css";
-import { Button, Card, CardContent, Grid, Typography } from "@mui/material";
+import { AppBar, Button, Card, CardContent, Grid, Toolbar, Typography } from "@mui/material";
 import OfferModal from "./modelComponents/OfferModel";
 
 function App() {
@@ -24,6 +24,13 @@ function App() {
       className="App"
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
+       <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Aikenist
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <h1>Offers</h1>
       <div style={{ marginTop: "20px", maxWidth: "700px", width: "100%" }}>
         {OfferCards.map((offer, index) => (
