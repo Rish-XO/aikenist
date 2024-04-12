@@ -27,7 +27,7 @@ function OfferModal({ open, handleClose }) {
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
           Sample offer details go here.
         </Typography>
-        <Button onClick={handleClose}>Order Now</Button>
+        <Button onClick={handleClose} sx={{marginTop:"20px", bgcolor: '#FF5733', color: 'black' }}>Order Now</Button>
       </Box>
     </Modal>
   );

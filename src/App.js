@@ -46,19 +46,13 @@ function App() {
                     <Typography variant="h5" component="div">
                       Card {offer} Title
                     </Typography>
-                    <Typography variant="body2">
-                      This is a sample card content for Offer {offer}. You can
-                      put any text or components here.
+                    <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+                      Get up to 8% off + extra 15% off on your first allopathy
+                      medicine order
                     </Typography>
                   </Grid>
                 </Grid>
-                <Button
-                  onClick={handleOpenModal}
-                  variant="contained"
-                  color="primary"
-                >
-                  Order details
-                </Button>
+                <Button onClick={handleOpenModal} sx={{ fontWeight: 'bold', color: '#FF5733' }}>Order details</Button>
               </CardContent>
             </Card>
           </div>
