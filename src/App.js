@@ -8,9 +8,11 @@ function App() {
   const OfferCards = ["1", "2", "3"];
 
   const [openModal, setOpenModal] = useState(false);
+  const [selectedOffer, setSelectedOffer] = useState(null);
 
-  const handleOpenModal = () => {
+  const handleOpenModal = (offer) => {
     setOpenModal(true);
+    setSelectedOffer(offer);
   };
 
   const handleCloseModal = () => {
@@ -52,14 +54,14 @@ function App() {
                     </Typography>
                   </Grid>
                 </Grid>
-                <Button onClick={handleOpenModal} sx={{ fontWeight: 'bold', color: '#FF5733' }}>Order details</Button>
+                <Button onClick={() => handleOpenModal(offer)} sx={{ fontWeight: 'bold', color: '#FF5733' }}>Order details</Button>
               </CardContent>
             </Card>
           </div>
         ))}
       </div>
       {/* Offer modal */}
-      <OfferModal open={openModal} handleClose={handleCloseModal} />
+      <OfferModal open={openModal} handleClose={handleCloseModal} selectedOffer={selectedOffer} />
     </div>
   );
 }

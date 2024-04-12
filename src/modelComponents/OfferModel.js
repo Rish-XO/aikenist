@@ -1,6 +1,6 @@
 import { Modal, Box, Typography, Button } from '@mui/material';
 
-function OfferModal({ open, handleClose }) {
+function OfferModal({ open, handleClose, selectedOffer }) {
   return (
     <Modal
       open={open}
@@ -22,7 +22,7 @@ function OfferModal({ open, handleClose }) {
         }}
       >
         <Typography id="modal-modal-title" variant="h6" component="h2">
-          Offer Details
+          Offer {selectedOffer} Details
         </Typography>
         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
           Sample offer details go here.
